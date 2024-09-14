@@ -9,7 +9,7 @@ fix : `kubectl patch ClusterGroup -n fleet-local default --type=json -p='[{"op":
 ## kubectl apply
 
 ```bash
-kubectl  apply -f https://raw.githubusercontent.com/clemenko/fleet/main/gitrepo.yml
+kubectl  apply -f https://raw.githubusercontent.com/joshyorko/fleet/main/gitrepo.yml
 ```
 
 ## More examples
