@@ -143,7 +143,7 @@ nodepools:
     diskSize: 100 # required (example: 64)
     imageName: default/image-dgflm  # required (example: default/image-xyz)
     # keyPairName: ''
-    memorySize: 16 # required (example: 8)
+    memorySize: 20 # required (example: 8)
     # networkInfo: ''
     # networkModel: virtio
     networkName: default/vlan1 # required (example: default/default)
