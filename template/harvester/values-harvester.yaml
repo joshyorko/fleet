@@ -123,84 +123,6 @@ nodepools:
     quantity: 3
     etcd: true
     controlplane: true
-    worker: false
-    # labels:
-      # key: value
-    # taints:
-      # effect: value
-      # key: value
-      # value: value
-    paused: false
-    # drainBeforeDelete: true
-    # drainBeforeDeleteTimeout: 30s
-    # unhealthyNodeTimeout: 60s
-    # machineDeploymentLabels:
-      # key: value
-    # kubeconfigContent: # only needed if not using cloudCredentialSecretName
-    cpuCount: 2 # required (example: 4)
-    # diskBus: virtio
-    # diskInfo: ''
-    diskSize: 100 # required (example: 64)
-    imageName: default/image-dgflm  # required (example: default/image-xyz)
-    # keyPairName: ''
-    memorySize: 4 # required (example: 8)
-    # networkInfo: ''
-    # networkModel: virtio
-    networkName: default/vlan1 # required (example: default/default)
-    # networkType: ''
-    # sshPassword: ''
-    # sshPort: 22
-    # sshPrivateKeyPath: ''
-    sshUser: kdlocpanda # required (example: rocky)
-    userData: |
-      #cloud-config
-      disable_root: false
-      package_update: true
-      packages:
-        - vim
-        - sudo
-        - epel-release
-        - bind-utils
-        - qemu-guest-agent
-      runcmd:
-        - sysctl -w net.ipv6.conf.all.disable_ipv6=1
-        - dnf install -y iscsi-initiator-utils
-        - systemctl enable iscsid
-        - systemctl start iscsid
-        - iscsiadm --version
-      ssh_pwauth: True
-      users:
-        - name: root
-          hashed_passwd: $6$wF4CODsMlmXQn0r5$x32sJP1ehp97SUbUmEHV.vzhFNjxf4nbBW3qOYQt.Ed/v.M0eP0fxXOByQMNp/Fv4PLYJ8/c6SpQv4Qd8qWaJ/
-          lock_passwd: false
-          shell: /bin/bash
-          ssh_authorized_keys:
-            - ssh-ed25519
-              AAAAC3NzaC1lZDI1NTE5AAAAIGXodQ11B19sJi9iHdsGhLcIhltEvYpjrTMuDARK1Yc2
-              joshua.yorko@gmail.com
-        - name: kdlocpanda
-          hashed_passwd: $6$wF4CODsMlmXQn0r5$x32sJP1ehp97SUbUmEHV.vzhFNjxf4nbBW3qOYQt.Ed/v.M0eP0fxXOByQMNp/Fv4PLYJ8/c6SpQv4Qd8qWaJ/
-          lock_passwd: false
-          shell: /bin/bash
-          sudo: ALL=(ALL) NOPASSWD:ALL
-          ssh_authorized_keys:
-            - ssh-ed25519
-              AAAAC3NzaC1lZDI1NTE5AAAAIGXodQ11B19sJi9iHdsGhLcIhltEvYpjrTMuDARK1Yc2
-              joshua.yorko@gmail.com
-
-      network:
-        version: 1
-        config:
-          - type: nameserver
-            address:
-              - 192.168.1.1
-
-
-  - name: worker-nodes
-    # displayName: wk-nodes
-    quantity: 3
-    etcd: false
-    controlplane: false
     worker: true
     # labels:
       # key: value
@@ -214,12 +136,6 @@ nodepools:
     # unhealthyNodeTimeout: 60s
     # machineDeploymentLabels:
       # key: value
-    # machineDeploymentAnnotations:
-      # key: value
-    # rollingUpdate:
-      # maxUnavailable: 1
-      # maxSurge: 1
-    # clusterId: # only needed if not using cloudCredentialSecretName
     # kubeconfigContent: # only needed if not using cloudCredentialSecretName
     cpuCount: 4 # required (example: 4)
     # diskBus: virtio
@@ -227,7 +143,7 @@ nodepools:
     diskSize: 100 # required (example: 64)
     imageName: default/image-dgflm  # required (example: default/image-xyz)
     # keyPairName: ''
-    memorySize: 12 # required (example: 8)
+    memorySize: 4 # required (example: 8)
     # networkInfo: ''
     # networkModel: virtio
     networkName: default/vlan1 # required (example: default/default)
@@ -235,7 +151,7 @@ nodepools:
     # sshPassword: ''
     # sshPort: 22
     # sshPrivateKeyPath: ''
-    sshUser: kdlocpanda # required (example: rocky)
+    sshUser:  # required (example: rocky)
     userData: |
       #cloud-config
       disable_root: false
@@ -278,6 +194,9 @@ nodepools:
           - type: nameserver
             address:
               - 192.168.1.1
+
+
+ 
 
 # addons values
 addons:
