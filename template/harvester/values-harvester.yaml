@@ -4,7 +4,7 @@
 cloudprovider: harvester
 
 # cloud provider credentials (example: aws-creds)
-cloudCredentialSecretName: harvester-creds
+cloudCredentialSecretName: arc-reactor-kubeconfig
 
 # rancher manager url
 rancher:
