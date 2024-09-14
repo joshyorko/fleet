@@ -1,4 +1,4 @@
-# clemenko
+# joshyorko
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -25,7 +25,7 @@ spec:
       - name: flask
         securityContext:
           allowPrivilegeEscalation: false
-        image: clemenko/flask_simple
+        image: joshyorko/flask_simple
         #command: [ "/bin/sh", "-c", "sleep 3003003240204242" ]
         ports:
         - containerPort: 5000

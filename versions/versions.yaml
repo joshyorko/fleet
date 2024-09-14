@@ -1,4 +1,4 @@
-# clemenko
+# joshyorko
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: versions
-        image: clemenko/dzver
+        image: joshyorko/dzver
         securityContext:
           allowPrivilegeEscalation: false
         ports:
