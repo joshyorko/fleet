@@ -1,14 +1,13 @@
 cloudprovider: harvester
-cloudCredentialSecretName: harvester-creds
+cloudCredentialSecretName: Harvester
 rancher:
   cattle:
-    url: rancher.rfed.io
+    url: rancher.192.168.1.112.sslip.io
 cluster:
-  name: rancher.192.168.1.112.sslip.io
+  name: arc-reactor
   cluster:
   annotations: {}
   labels: {}
-  name: dev-harvester
   config:
     kubernetesVersion: v1.28.10+rke2r1
     enableNetworkPolicy: true
