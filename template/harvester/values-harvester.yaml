@@ -140,7 +140,7 @@ nodepools:
     cpuCount: 4 # required (example: 4)
     # diskBus: virtio
     # diskInfo: ''
-    diskSize: 100 # required (example: 64)
+    diskSize: 200 # required (example: 64)
     imageName: default/image-dgflm  # required (example: default/image-xyz)
     # keyPairName: ''
     memorySize: 20 # required (example: 8)
