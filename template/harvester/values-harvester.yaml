@@ -120,7 +120,7 @@ cluster:
 nodepools:
   - name: control-plane-nodes
     # displayName: cp-nodes
-    quantity: 3
+    quantity: 1
     etcd: true
     controlplane: true
     worker: true
