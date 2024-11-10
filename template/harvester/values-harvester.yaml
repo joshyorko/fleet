@@ -19,7 +19,7 @@ cluster:
     # key: value
   name: rke2-cluster-harvester
   config:
-    kubernetesVersion: v1.29.8+rke2r1 # https://github.com/rancher/rke2/releases
+    kubernetesVersion: v1.30.6+rke2r1 # https://github.com/rancher/rke2/releases
     enableNetworkPolicy: true
     localClusterAuthEndpoint:
       enabled: false
@@ -124,6 +124,7 @@ nodepools:
     etcd: true
     controlplane: true
     worker: true
+    
     # labels:
       # key: value
     # taints:
@@ -141,7 +142,7 @@ nodepools:
     # diskBus: virtio
     # diskInfo: ''
     diskSize: 200 # required (example: 64)
-    imageName: default/image-dgflm  # required (example: default/image-xyz)
+    imageName: default/image-trxw9  # required (example: default/image-xyz)
     # keyPairName: ''
     memorySize: 20 # required (example: 8)
     # networkInfo: ''
@@ -207,7 +208,7 @@ addons:
       # values here
 
   longhorn:
-    enabled: false
+    enabled: true
     # version: 103.2.2+up1.5.4
     # values:
       # values here
