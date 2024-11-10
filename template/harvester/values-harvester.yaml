@@ -118,8 +118,8 @@ cluster:
 
 # node and nodepool(s) values
 nodepools:
-  - name: control-plane-nodes
-     displayName: cp-nodes
+  - name: cp-nodes
+    # displayName: cp-nodes
     quantity: 3
     etcd: true
     controlplane: true
