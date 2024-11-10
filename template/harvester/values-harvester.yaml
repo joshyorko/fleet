@@ -141,7 +141,7 @@ nodepools:
     cpuCount: 2 # required (example: 4)
     # diskBus: virtio
     # diskInfo: ''
-    diskSize: 200 # required (example: 64)
+    diskSize: 100 # required (example: 64)
     imageName: default/image-trxw9  # required (example: default/image-xyz)
     # keyPairName: ''
     memorySize: 8 # required (example: 8)
@@ -219,7 +219,7 @@ nodepools:
     cpuCount: 2 # required (example: 4)
     # diskBus: virtio
     # diskInfo: ''
-    diskSize: 200 # required (example: 64)
+    diskSize: 100 # required (example: 64)
     imageName: default/image-trxw9  # required (example: default/image-xyz)
     # keyPairName: ''
     memorySize: 8 # required (example: 8)
