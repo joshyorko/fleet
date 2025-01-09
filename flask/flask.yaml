@@ -25,7 +25,7 @@ spec:
       - name: flask
         securityContext:
           allowPrivilegeEscalation: false
-        image: joshyorko/flask_simple
+        image: clemenko/flask_simple
         #command: [ "/bin/sh", "-c", "sleep 3003003240204242" ]
         ports:
         - containerPort: 5000
@@ -127,7 +127,7 @@ metadata:
   name: flask
 spec:
   rules:
-  - host: flask.rfed.io
+  - host: flask.yorko.io
     http:
       paths:
       - path: /

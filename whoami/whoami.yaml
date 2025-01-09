@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: whoami
-        image: containous/whoami
+        image: traefik/whoami
         ports:
         - containerPort: 80
         imagePullPolicy: Always
@@ -45,7 +45,7 @@ metadata:
   name: whoami
 spec:
   rules:
-  - host: whoami.rfed.io
+  - host: whoami.yorko.io
     http:
       paths:
       - path: /

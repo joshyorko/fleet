@@ -45,7 +45,7 @@ metadata:
   name: versions
 spec:
   rules:
-  - host: versions.rfed.io
+  - host: versions.yorko.io
     http:
       paths:
       - path: /
