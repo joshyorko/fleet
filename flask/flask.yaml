@@ -127,7 +127,7 @@ metadata:
   name: flask
 spec:
   rules:
-  - host: flask.yorko.io
+  - host: flask-new.yorko.io
     http:
       paths:
       - path: /
